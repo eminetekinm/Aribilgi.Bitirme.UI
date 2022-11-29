@@ -2,48 +2,55 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div ng-app="homeEditController" ng-controller="HomeController">
 
-
-    <div class="row clearfix">
-        <div class="find-box">
-            <h1>Find your next product or<br>business partner here.</h1>
-            <h4>It has never been easier.</h4>
-            <div class="product-sh">
-                <div class="col-sm-6">
-                    <div class="form-sh">
-                        <input type="text" placeholder="Search something you love">
+<body>
+    <div ng-app="homeEditController" ng-controller="HomeController">
+        <div class="page-content-product">
+            <div class="main-product">
+                <div class="container">
+                    <div class="row clearfix">
+                        <div class="find-box">
+                            <h1>Find your next product or<br>business partner here.</h1>
+                            <h4>It has never been easier.</h4>
+                            <div class="product-sh">
+                                <div class="col-sm-6">
+                                    <div class="form-sh">
+                                        <input type="text" placeholder="Search something you love">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    @*category list*@
+                                    <div class="form-sh">
+                                        <select class="selectpicker" ng-model="categories">
+                                            <option ng-repeat="categories in GetCategories">{{categories.name}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                @*Search*@
+                                <div class="col-sm-3">
+                                    <div class="form-sh"> <a class="btn" href="#">Search</a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*category here*@
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6 col-md-3" ng-repeat="categories in GetCategories">
+                            <a href="Product/Index?id={{categories.id}}">
+                                <div class="box-img">
+                                    <h4>{{categories.name}}</h4>
+                                    <img src="{{categories.photo}}" alt="" />
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    @*category list*@
-                    <div class="form-sh">
-                        <select class="selectpicker">
-                            <option>Textiles</option>
-                            <option>Furniture</option>
-                            <option>Leather</option>
-                        </select>
-                    </div>
-                </div>
-                @*Search*@
-                <div class="col-sm-3">
-                    <div class="form-sh"> <a class="btn" href="#">Search</a> </div>
-                </div>
+                
             </div>
         </div>
+        
     </div>
-    @*product here*@
-    <div class="row" ng-repeat="products in GetProduct">
-        <div class="col-lg-3 col-sm-6 col-md-3">
-            <a href="productpage.html">
-                <div class="box-img">
-                    <h4>{{products.name}}</h4>
-                    <img src="{{products.photo}}" alt="" />
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
+</body>
 
 @section Scripts{
     <script src="~/js/home.js"></script>
