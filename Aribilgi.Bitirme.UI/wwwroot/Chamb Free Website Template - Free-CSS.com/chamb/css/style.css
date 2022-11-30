@@ -435,8 +435,8 @@ header .navbar-default .navbar-header {
 .page-content-product {}
 
 .main-product {
-	background-color: #09284b;
-	background-image: url('../images/bg_main.png');
+	background-color: #FFCBDB;
+	background-image: url('https://img.freepik.com/free-vector/vibrant-pink-watercolor-painting-background_53876-58931.jpg?w=2000');
 	padding-bottom: 180px;
 	background-position: center center;
 }
@@ -451,55 +451,55 @@ header .navbar-default .navbar-header {
 .find-box h1 {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 500;
-	color: #fff;
+	color: #660099;
 	font-size: 48px;
 	text-align: center;
 	padding-bottom: 22px;
 }
 
-.find-box h4 {
-	font-family: 'Raleway', sans-serif;
-	font-weight: 300;
-	color: #fff;
-	font-size: 22px;
-	text-align: center;
-	padding-bottom: 22px;
-}
+	.find-box h4 {
+		font-family: 'Raleway', sans-serif;
+		font-weight: 300;
+		color: #660099;
+		font-size: 22px;
+		text-align: center;
+		padding-bottom: 22px;
+	}
 
 .product-sh {}
 
 .form-sh input {
 	background: none;
 	border: none;
-	border-bottom: 1px solid #ffffff;
+	border-bottom: 1px solid #660099;
 	width: 100%;
 	min-height: 55px;
-	color: #fff;
+	color: #660099;
 	font-size: 22px;
 	font-weight: 300;
 }
 
-.form-sh input::-webkit-input-placeholder {
-	/* Chrome */
-	color: #ffffff;
-}
+	.form-sh input::-webkit-input-placeholder {
+		/* Chrome */
+		color: #660099;
+	}
 
-.form-sh input:-ms-input-placeholder {
-	/* IE 10+ */
-	color: #ffffff;
-}
+	.form-sh input:-ms-input-placeholder {
+		/* IE 10+ */
+		color: #660099;
+	}
 
-.form-sh input::-moz-placeholder {
-	/* Firefox 19+ */
-	color: #ffffff;
-	opacity: 1;
-}
+	.form-sh input::-moz-placeholder {
+		/* Firefox 19+ */
+		color: #660099;
+		opacity: 1;
+	}
 
-.form-sh input:-moz-placeholder {
-	/* Firefox 4 - 18 */
-	color: #ffffff;
-	opacity: 1;
-}
+	.form-sh input:-moz-placeholder {
+		/* Firefox 4 - 18 */
+		color: #660099;
+		opacity: 1;
+	}
 
 .form-sh .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
 	width: 100%;
@@ -508,22 +508,22 @@ header .navbar-default .navbar-header {
 .form-sh .btn-default {
 	background-color: transparent;
 	border: none;
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid #660099;
 	border-radius: 0px;
-	color: #fff;
+	color: #660099;
 	font-size: 22px;
 	font-weight: 300;
 	min-height: 55px;
 }
 
-.form-sh .open>.dropdown-toggle.btn-default:hover {
+.form-sh .open > .dropdown-toggle.btn-default:hover {
 	background-color: transparent;
-	color: #ffffff;
+	color: #660099;
 }
 
 .form-sh .bootstrap-select .dropdown-toggle:focus {
 	border: none;
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid #660099;
 	outline: none !important;
 }
 
@@ -533,9 +533,9 @@ header .navbar-default .navbar-header {
 
 .form-sh .btn-default.active,
 .form-sh .btn-default:active,
-.form-sh .open>.dropdown-toggle.btn-default {
+.form-sh .open > .dropdown-toggle.btn-default {
 	background-color: transparent;
-	color: #fff;
+	color: #660099;
 }
 
 .form-sh .dropup .dropdown-menu,
@@ -550,7 +550,7 @@ header .navbar-default .navbar-header {
 }
 
 .form-sh a.btn {
-	background: #1d99ff;
+	background: #660099;
 	color: #ffffff;
 	min-height: 55px;
 	width: 100%;
@@ -567,7 +567,7 @@ header .navbar-default .navbar-header {
 }
 
 .form-sh .bootstrap-select.btn-group .dropdown-menu {
-	background: #09294c;
+	background: #F8BDFF;
 	padding: 0px;
 }
 
@@ -600,13 +600,13 @@ header .navbar-default .navbar-header {
 }
 
 .box-img {
-	background: #051d36;
+	background: #FFD4FB;
 	text-align: center;
 	padding-bottom: 30px;
 	min-height: 280px;
 	margin-bottom: 30px;
 	position: relative;
-	border-bottom: solid #007dea 3px;
+	border-bottom: solid #FFD4FB 3px;
 	transition: ease all 0.5s;
 }
 
@@ -620,11 +620,11 @@ header .navbar-default .navbar-header {
 	letter-spacing: 0px;
 }
 
-.box-img:hover {
-	cursor: pointer;
-	transform: scale(1.1);
-	background: #007dea;
-}
+	.box-img:hover {
+		cursor: pointer;
+		transform: scale(1.1);
+		background: #FBA8FF;
+	}
 
 .food {
 	position: absolute;
@@ -916,9 +916,9 @@ header .navbar-default .navbar-header {
 
 .products {
 	padding: 40px 0px 60px 0px;
-	background: #fff;
 	position: relative;
 }
+
 
 .main-products {}
 
@@ -943,15 +943,15 @@ header .navbar-default .navbar-header {
 }
 
 .slider {
-	margin: 0 auto;
+	
 	position: relative;
 }
 
 .prod-box {
-	border: 1px solid #e7e7e7;
-	background: #fff;
-	padding: 12px;
-	margin: 0px 15px;
+	border: 1px solid #e7e7e7 !important;
+	background: #fff !important;
+	padding: 12px !important;
+	margin: 0px 15px !important;
 }
 
 .prod-i img {

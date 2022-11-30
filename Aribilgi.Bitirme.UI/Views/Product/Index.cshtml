@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body>
+    <div ng-app="productEditController" ng-controller="ProductController">
+        <div class="page-content-product">
+            <div class="main-product">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6 col-md-3" ng-repeat="category in GetSingleCategoryWithProductByCategoryId">
+                           
+                                <div class="box-img">
+                                    <h4>{{category.name}}</h4>
+                                   @* <img src="{{category.photo}}" alt="" />*@
+                                </div>
+                     
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+@section Scripts{
+    <script src="~/js/product.js"></script>
+  }
