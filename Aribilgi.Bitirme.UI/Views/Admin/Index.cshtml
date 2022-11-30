@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+<body>
+    <div ng-app="homeEditController" ng-controller="HomeController">
+        <div ng-repeat="product in GetProduct">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Ürün Adı</th>
+                        <th scope="col">Ürün Stok </th>
+                        <th scope="col">Ürün Fiyat</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">{{product.id}}</th>
+                        <td>{{product.name}}</td>
+                        <td>{{product.stock}}</td>
+                        <td>{{product.price}}</td>
+                        <td><a ng-click="ProductDelete(product.id)" class="btn btn-warning">Sil</a></td>
+                        <td><a href="#" class="btn btn-primary">Güncelle</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+
+@section Scripts{
+    <script src="~/js/home.js"></script>
+  }
+
