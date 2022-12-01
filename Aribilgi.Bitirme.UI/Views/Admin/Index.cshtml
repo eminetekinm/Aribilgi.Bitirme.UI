@@ -3,10 +3,13 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>ADMİN PANELİ</h2>
 <body>
     <div ng-app="homeEditController" ng-controller="HomeController">
-        <div ng-repeat="product in GetProduct">
+        <div>
+            <div>
+                  <a href="/ProductAdd/Index"  class="btn btn-primary">Ekle</a>
+            </div>
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
@@ -18,14 +21,14 @@
                         <th></th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody  ng-repeat="product in GetProductsWithCategory">
                     <tr>
                         <th scope="row">{{product.id}}</th>
                         <td>{{product.name}}</td>
                         <td>{{product.stock}}</td>
                         <td>{{product.price}}</td>
-                        <td><a ng-click="ProductDelete(product.id)" class="btn btn-warning">Sil</a></td>
-                        <td><a href="#" class="btn btn-primary">Güncelle</a></td>
+                        <td><a ng-click="Remove(product.id)" class="btn btn-danger">Sil</a></td>
+                        <td><a href="/ProductUpdate/Index?id={{product.id}}"  class="btn btn-primary">Güncelle</a></td>
                     </tr>
                 </tbody>
             </table>

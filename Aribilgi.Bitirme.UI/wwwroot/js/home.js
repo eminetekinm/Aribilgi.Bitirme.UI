@@ -20,7 +20,16 @@ app.controller("HomeController", function ($scope, $http) {
             return result;
         }
     }
+    $scope.GetCategories = function () {
+        $http({
+            method: "GET",
+            headers: { "Contet-Type": "Application/json;charset=utf-8" },
+            url: "https://localhost:7001/api/Categories/GetAll",
 
+        }).then(function (d) {
+            $scope.GetCategories = d.data.data;
+        });
+    }
     
 
     $scope.GetProducts = function () {
@@ -44,14 +53,15 @@ app.controller("HomeController", function ($scope, $http) {
             $scope.GetProductsWithCategory = d.data.data;
         });
     }
-    $scope.ProductDelete = function () {
+    $scope.Remove = function (id) {
         $http({
             method: "DELETE",
             headers: { "Contet-Type": "Application/json;charset=utf-8" },
-            url: "https://localhost:7001/api/Products/Remove/" + $scope.GetUrlParameter("id"),
+            url: "https://localhost:7001/api/Products/Remove?id="+id,
+            data: { id: id }
         }).then(function (d) {
             alert(d.data.message[0]);
-            $scope.ProductDelete();
+            $scope.GetProduct();
         }, function (d) {
             alert(d.data.errors.Title[0]);
         });

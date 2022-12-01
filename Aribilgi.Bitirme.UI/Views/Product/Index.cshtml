@@ -10,27 +10,34 @@
 
                     <div class="row">
                         <div class="col-lg-3 col-sm-6 col-md-3" ng-repeat="category in GetSingleCategoryWithProductByCategoryId.products">
-
-                            <div class="box-img">
-                                <h4>{{category.name}}</h4>
-                                <img src="{{category.photo}}" alt="" />
+                            <div>
+                                <br />
                             </div>
+                               <div>
+                                <br />
+                            </div>
+
                             <div class="prod-box">
                                 <div class="prod-i">
+
                                     <img src="{{category.photo}}" alt="#" />
                                 </div>
+
                                 <div class="prod-dit clearfix">
                                     <div class="dit-t clearfix">
                                         <div class="left-ti">
                                             <h4>{{category.name}}</h4>
                                             <br />
                                             <h5 style="font-weight:bold">{{GetSingleCategoryWithProductByCategoryId.name}}</h5>
+                                            <br />
+                                            <h4>Fiyat  ₺{{category.price}}</h4>
+                                            <br />
+                                            <h4>Stok  {{category.stock}}</h4>
+                                            <br />
                                         </div>
-                                        <h4 >Fiyat  ₺{{category.price}}</h4>
-                                        <br />
-                                        <h4 >Stok  {{category.stock}}</h4>
+
                                     </div>
-                                    
+
                                 </div>
                             </div>
 

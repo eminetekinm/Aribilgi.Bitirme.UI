@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div ng-app="ProductAddApp" ng-controller="ProductAddController">
+    <div class="form-group">
+        <label>Ürün Adı Girin:</label>
+        <input class="form-control" ng-model="product.name" />
+    </div>
+
+    <div class="form-group">
+        <label>Ürün Stoğu Giriniz:</label>
+        <input class="form-control" ng-model="product.stock" />
+    </div>
+    <div class="form-group">
+        <label>Ürün Fiyatı Giriniz:</label>
+        <input class="form-control" ng-model="product.price" />
+    </div>
+
+    <div class="form-group">
+        <label>Ürün Resim Url'i Giriniz':</label>
+        <input class="form-control" ng-model="product.photo" />
+    </div>
+
+    <div class="form-group">
+        <label>Kategori Seçiniz:</label>
+        <select class="form-control" ng-model="product.categoryId">
+            <option ng-value="">Lütfen seçim yapınız</option>
+            <option ng-repeat="category in GetCategories" ng-value={{category.id}}>{{category.name}}</option>
+        </select>
+
+    </div>
+
+
+    <div class="form-group">
+        <a ng-click="ProductAdd()" class="btn btn-primary">Kaydet</a>
+    </div>
+
+</div>
+@section Scripts{
+    <script src="~/js/prodductAdd.js"></script>
+}
+

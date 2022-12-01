@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div ng-app="ProductUpdateApp" ng-controller="ProductUpdateController">
+    <div>
+            <br />
+            <br />
+            <div class="form-group">
+                <img src="{{products.photo}}">
+                <br />
+                <h4>Fotoğraf</h4>
+                <input type="text" class="form-control"  ng-model="products.photo">
+            </div>
+            <div class="form-group">
+                <label >Ürün Adı</label>
+                <input type="text" class="form-control"  ng-model="products.name">
+            </div>
+            <div class="form-group">
+                <label >Stok</label>
+                <input type="text" class="form-control"   ng-model="products.stock">
+            </div>
+            <div class="form-group">
+                <label >Fiyatı</label>
+                <input type="text" class="form-control"  ng-model="products.price">
+            </div>
+
+            
+            <button ng-click="ProductUpdate()" class="btn btn-primary">Kaydet</button>
+        
+    </div>
+</div>
+@section Scripts{
+    <script src="~/js/prodductUpdate.js"></script>
+}
+
+
+
